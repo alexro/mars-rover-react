@@ -2,7 +2,7 @@ As even google and git projects started with sloppy code - it would be a mistake
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Some choices about the project structure are opionated and would have been different for a production app.
 
-In this implementation Rover stops moving if reaches end of Area. Another possible implementation is to throw exception or make Rover appear from the other side. Code allows extending by inheriting base implementation and overriding selected methods in a standard OOP approach.
+In this implementation Rover stops moving if reaches the end of Area. Another possible implementation is to throw exception or make Rover appear from the other side. Code allows extending by inheriting base implementation and overriding selected methods in a standard OOP approach.
 
 ## Available Scripts
 
