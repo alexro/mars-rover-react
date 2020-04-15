@@ -25,6 +25,8 @@ export function evaluate(input) {
           rover.move();
         } else if ('LR'.indexOf(m) >= 0) {
           rover.turn(m);
+        } else {
+          throw "Bad input"
         }
       }
 
@@ -33,6 +35,6 @@ export function evaluate(input) {
 
     return results;
   } catch (err) {
-    return [err];
+    return [`Error: ${err}`];
   }
 }

@@ -18,6 +18,16 @@ test('evaluate many', () => {
     M
     5 1 E
     RM
+    3 3 S
+    L
+    0 0 S
+    M
+    5 5 N
+    M
+    0 1 W
+    M
+    5 1 E
+    M
   `)
   ).toEqual([
     '3 4 W',
@@ -25,5 +35,21 @@ test('evaluate many', () => {
     '2 3 N',
     '5 5 N',
     '5 0 S',
+    '3 3 E',
+    '0 0 S',
+    '5 5 N',
+    '0 1 W',
+    '5 1 E'
   ]);
 });
+
+test('returns error on bad input - extra line with a space', () => {
+  console.log(evaluate('3 3\n \n3 4 N\nLR\n'));
+  expect(evaluate('3 3\n \n3 4 N\nLR\n')[0].startsWith('Error')).toBe(true);
+});
+
+test('returns error on bad input - wrong move', () => {
+  console.log(evaluate('3 3\n3 4 N\nK\n'));
+  expect(evaluate('3 3\n \n3 4 N\nLR\n')[0].startsWith('Error')).toBe(true);
+});
+

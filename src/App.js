@@ -14,9 +14,7 @@ function App() {
   }
 
   function updateResults() {
-    if (input) {
-      setResults(evaluate(input));
-    }
+    setResults(evaluate(input));
   }
 
   return (
@@ -33,6 +31,7 @@ function App() {
           autoFocus
           value={input}
           onChange={updateInput}
+          data-testid="text"
         />
       </div>
       <div>
