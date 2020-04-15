@@ -4,8 +4,9 @@ import { evaluate } from './domain/evaluator';
 
 function App() {
   const [input, setInput] = React.useState(
-    '5 5\n 1 2 N\n LMLMLMLMM \n 3 3 E \n MMRMMRMRRM \n'
+    '5 5\n1 2 N\nLMLMLMLMM\n3 3 E\nMMRMMRMRRM\n'
   );
+
   const [results, setResults] = React.useState([]);
 
   function updateInput(e) {
@@ -20,8 +21,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        Please enter area details, rover position and moves
+      <header>
+        <h4 className="App-header">
+          Please enter area details, rover position and moves
+        </h4>
       </header>
       <div className="evDetails">
         <textarea
@@ -38,7 +41,7 @@ function App() {
       <div className="evResults">Results:</div>
       <div className="evResults">
         {results.map((r) => (
-          <div>{r}</div>
+          <div key={r}>{r}</div>
         ))}
       </div>
     </div>

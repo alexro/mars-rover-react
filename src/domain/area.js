@@ -1,5 +1,5 @@
 export function setupArea(input) {
-  const areaInput = input.split(' ');
+  const areaInput = input.replace(/\s+/g, ' ').split(' ');
 
   return {
     minX: 0,

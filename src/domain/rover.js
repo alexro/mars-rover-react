@@ -3,7 +3,6 @@ export class Rover {
     this.interpreter = interpreter;
     this.pos = pos;
     this.dir = interpreter.getDirectionByChar(dir);
-    this.move.bind(this);
   }
 
   interpreter;
@@ -11,16 +10,11 @@ export class Rover {
   dir;
 
   move() {
-    console.log('Move');
     this.pos = this.interpreter.changePosition(this.pos, this.dir);
-    console.log(this.report());
   }
 
   turn(code) {
-    console.log('Turn:', code);
-
     this.dir = this.interpreter.changeDirection(this.dir, code);
-    console.log(this.report());
   }
 
   report() {
@@ -31,7 +25,7 @@ export class Rover {
 }
 
 export function setupRover(interpreter, input) {
-  const roverInput = input.split(' ');
+  const roverInput = input.replace(/\s+/g, ' ').split(' ');
   const pos = {
     x: parseInt(roverInput[0], 10),
     y: parseInt(roverInput[1], 10),
