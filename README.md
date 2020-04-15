@@ -1,6 +1,6 @@
 As even google and git projects started with sloppy code - it would be a mistake to judge this code by completeness and perfection. What makes the product great - is a continuous team effort. With this in mind please have a look at the simple Mars Rover emulator.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Some choices about the project structure are opionated and would have been different for a production app.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Some choices about the project structure are opinionated and would have been different for a production app.
 
 In this implementation Rover stops moving if reaches the end of Area. Another possible implementation is to throw exception or make Rover appear from the other side. Code allows extending by inheriting base implementation and overriding selected methods in a standard OOP approach.
 
